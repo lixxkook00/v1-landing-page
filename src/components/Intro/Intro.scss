@@ -1,0 +1,22 @@
+.Intro{
+    height: 70vh;
+    width: 100vw;
+    
+    &-icon{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 600px;
+        width: 100%;
+
+        div{
+            height: 95% !important;
+            width: 100% !important;
+            div,
+            canvas{
+                height: 100% !important;
+                width: 100% !important;
+            }
+        }
+    }
+}
