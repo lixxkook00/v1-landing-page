@@ -3,6 +3,6 @@ import './PlayButton.scss'
 
 export default function PlayButton() {
   return (
-    <div>Plac</div>
+    <div></div>
   )
 }
