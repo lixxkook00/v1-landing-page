@@ -37,11 +37,16 @@ export default function Metaverse() {
       // vr
       if(percent>0 && percent<30){
         setVrScale(1+(percent)/10)
+
+        if(percent >2  && resetVR===false){
+          setAutoRotateVR(false)
+          setResetVR(true)
+        }
       }
 
-      if(percent>2 && percent<10  && resetVR===false){
-        setAutoRotateVR(false)
-        setResetVR(true)
+      // clear vr state
+      if(percent > 40){
+        setVrScale(1.2)
       }
 
       // video
@@ -51,10 +56,8 @@ export default function Metaverse() {
 
       // clear video
       if(percent<28 ){
-        setOpacityVideo(0 )
+        setOpacityVideo(0)
       }
-
-      console.log(vrScale)
     }
 
     // clean up code
@@ -99,7 +102,7 @@ export default function Metaverse() {
             display: opacityVideo !==0 ? "block" : "none"
           }}
         >
-          <img className="img-height" src="https://miro.medium.com/max/1200/1*y21tHlRaXB-dNyFxQLNyHQ.jpeg" alt="" />
+          <img className="img-width" src="https://socradar.io/wp-content/uploads/2022/03/future-of-cybersecurity-in-the-era-of-metaverse-1-1200x800.jpg" alt="" />
         </div>
       </div>
     </div>

@@ -1,12 +1,29 @@
-import React, { Suspense, useRef } from 'react'
+import React, { Suspense, useRef, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stage } from '@react-three/drei'
 import Headphone from '../Headphone'
 
 import './Intro.scss'
 
+const titles = ['WE CREATIVE','WE WATCH',"WE EARN"]
+
 export default function Intro() {
   const ref = useRef()
+
+  const [titleIndex,setTitleIndex] = useState(0)
+
+  const handleTitleIndex = (index) => {
+    if(index >= titles.length-1){
+      return 0
+    }else{
+      return index +1``
+    }
+  }
+
+  setInterval(() => {
+    setTitleIndex(handleTitleIndex(titleIndex))
+  },6000)
+
   return (
     <div className="Intro centering">
       <div className="container">
@@ -17,7 +34,7 @@ export default function Intro() {
               <div className="text-box">
                 <div className="line"></div>
                 <div className="layer"></div>
-                <h1>VIEW TO EARN</h1>
+                <h1>{titles[titleIndex]}</h1>
               </div>
             </div>
           </div>
