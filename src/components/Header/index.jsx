@@ -12,20 +12,20 @@ export default function Header() {
               </div>
               <div className="header-nav centering">
                 <div className="header-nav-item">
-                  Home
+                  Introduction
                 </div>
                 <div className="header-nav-item">
-                  About
+                  Story
+                </div>
+                <div className="header-nav-item">
+                  Tokenomic
                 </div>
                 <div className="header-nav-item">
                   Whitepaper
                 </div>
-                <div className="header-nav-item">
-                  Roadmap
-                </div>
               </div>
               <a href="http://google.com" className="header-view-now">
-                View Now
+                Connect
               </a>
           </div>
         </div>

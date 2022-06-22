@@ -16,13 +16,13 @@ export default function Intro() {
     if(index >= titles.length-1){
       return 0
     }else{
-      return index +1``
+      return index +1
     }
   }
 
-  setInterval(() => {
-    setTitleIndex(handleTitleIndex(titleIndex))
-  },6000)
+  // setInterval(() => {
+  //   setTitleIndex(handleTitleIndex(titleIndex))
+  // },6000)
 
   return (
     <div className="Intro centering">

@@ -1,27 +1,6 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
-
-// export default function VR(props) {
-//   const group = useRef();
-//   const { nodes, materials } = useGLTF("./img/mesh.glTF");
-//   return (
-//     <group ref={group} {...props} dispose={null}>
-//       <directionalLight intensity={1.5} decay={2} position={[3, 0, 5]} />
-//       <directionalLight intensity={1.5} decay={2} position={[-3, 0, 5]} />
-//       <spotLight intensity={1} decay={2} position={[0, 0, 4]} />
-//       <mesh
-//         castShadow
-//         receiveShadow
-//         geometry={nodes.mesh.geometry}
-//         material={nodes.mesh.material}
-//       />
-//     </group>
-//   );
-// }
-
-// useGLTF.preload("./img/mesh.glTF");
-
 export default function VR(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF(
@@ -35,6 +14,7 @@ export default function VR(props) {
   group?.current?.rotation.set(0,0,0)
 
   group?.current?.rotation.set(89.61,110,12.567)
+  
 
   return (
     <group ref={group} {...props} dispose={null}>

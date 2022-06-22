@@ -22,6 +22,14 @@ a:not([href]):not([tabindex]){
 }
 
 // custom class inline
+.team{
+  position: relative;
+  height: 100vh;
+  font-size: 100px;
+  color: #fff;
+  font-weight: 800;
+  background-image: linear-gradient(180deg, #7950f2 5%, #f783ac 95%);
+}
 
 .margin-auto{
   margin: auto;

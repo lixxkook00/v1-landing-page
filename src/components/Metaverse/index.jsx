@@ -11,10 +11,12 @@ export default function Metaverse() {
   const metaverseComponent = useRef();
 
   const [percent,setPercent] = useState(0)
+
+  const [vrScale,setVrScale] = useState(1)
   const [resetVR,setResetVR] = useState(false)
   const [autoRotateVR,setAutoRotateVR] = useState(true)
+
   const [opacityVideo,setOpacityVideo] = useState(0)
-  const [vrScale,setVrScale] = useState(1)
 
   // get percent of metaverseComponent
   useEffect(() => {
@@ -91,14 +93,12 @@ export default function Metaverse() {
         </div>
 
         {/* Transmission */}
-        
-
         {/* Video */}
         <div 
           className="metaverse-video"
           style={{
             opacity:`${opacityVideo}`,
-            // transform:`scale(${opacityVideo})`,
+            transform:`scale(${opacityVideo})`,
             display: opacityVideo !==0 ? "block" : "none"
           }}
         >
